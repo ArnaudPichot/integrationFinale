@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "aniron";
+  src: url('../polices/titre/anirm___.ttf') format('truetype');
+  }	
+
+@font-face {
+  font-family: "business";
+  src: url('../polices/text/partybusiness.ttf') format('truetype');
+  }
+.logo{
+  /*background-image: url("../img/logo.png");*/
+  background-repeat: no-repeat;
+	background-size: cover;
+  height: 30px;
+}
+.titre{
+  /*font-family: "aniron", Helvetica, Arial, sans-serif;*/
+  font-size: 12px;
+  color: white;
+}
+.titre a{
+  font-family: "aniron", Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+button{
+  color: white;
+}
+.active{
+  /*text-decoration: underline;*/
+  border-bottom: 3px solid #fff;
+}
+.slide1{
+  background-image: url("../img/slide_dark_vador.jpg");
+}
+.slide2{
+  background-image: url("../img/weneedyou-1.png");
+}
+.slide3{
+  background-image: url("../img/army.png");
+}
+.slide1, .slide2, .slide3{
+  background-repeat: no-repeat;
+	background-size: cover;
+  height: 500px;
+}
+section h3, section span, section li a{
+  font-family: "aniron", Helvetica, Arial, sans-serif;
+}
+section h3, section span{
+  display: inline;
+}
+section li a{
+  color: #000000;
+  font-size: 12px;
+  background-color: aqua;
+}
+.bgtemp{
+  background-color: brown;
+}
+section li a:hover{
+  text-decoration: none;
+  color: #F1730C;
+  border-bottom: 3px solid #F1730C;
+}
+/* css image gandalf */
+.image {
+  position:absolute;
+text-align: center;
+border: 5px;
+}
+.image p{
+/*position:absolute;
+  left: 50px;
+  top: 50px;
+width: 400px;
+height: 125px;*/
+  font-size: 48px;
+  color:#000000;
+text-align: center;
+margin: auto;
+border-radius: 10px 10px 10px 10px;
+/*background-color: rgba(255,255,255,0.8);*/
+background-color: blue;
+}
+img{
+  height: 350px;
+opacity: 0.6;
+}
+
+.ecriture {
+  color: rgba(255,255,255,1);
+  background-color: blue;
+}
+
+img span{
+color: #ffd700;
+}
+
+img h1{
+position:absolute;
+  left: 100px;
+  top: 250px;
+  font-size: 72px;
+font-weight : lighter;
+  color:#FFFFFF;
+}
+
+.image:hover img{
+opacity:1;
+}
+
+.image:hover .ecriture{
+opacity:0;
+}
+
+.image:hover h1{
+position:absolute;
+  left: 150px;
+  top: 450px;
+  font-size: 48px;
+font-weight : lighter;
+  color:#FFFFFF;
+}
