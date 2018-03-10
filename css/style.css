@@ -30,6 +30,7 @@ button{
   /*text-decoration: underline;*/
   border-bottom: 3px solid #fff;
 }
+
 .slide1{
   background-image: url("../img/slide_dark_vador.jpg");
 }
@@ -44,81 +45,112 @@ button{
 	background-size: cover;
   height: 500px;
 }
-section h3, section span, section li a{
+
+section h4, section span, section li a{
   font-family: "aniron", Helvetica, Arial, sans-serif;
 }
-section h3, section span{
+section h4, section span{
   display: inline;
 }
 section li a{
   color: #000000;
-  font-size: 12px;
+  font-size: 10px;
   background-color: aqua;
-}
-.bgtemp{
-  background-color: brown;
 }
 section li a:hover{
   text-decoration: none;
   color: #F1730C;
   border-bottom: 3px solid #F1730C;
 }
+
 /* css image gandalf */
+
+/*
+.background1 {
+  background: url("http://images.innoveduc.fr/integration_gandalf.png");
+}
+*/
+
+/*
+*  code de pre-rentree
+*
+*
+**********************/
 .image {
-  position:absolute;
-text-align: center;
-border: 5px;
+  position: relative;
+  /*z-index: 0;*/
+  text-align: center;
+  border: 5px;
+  height: 200px;
 }
 .image p{
-/*position:absolute;
-  left: 50px;
-  top: 50px;
-width: 400px;
-height: 125px;*/
-  font-size: 48px;
+  position: absolute;
+  left: 90px;
+  top: 20px;
+  width: 200px;
+  height: 75px;
+  font-size: 24px;
   color:#000000;
-text-align: center;
-margin: auto;
-border-radius: 10px 10px 10px 10px;
-/*background-color: rgba(255,255,255,0.8);*/
-background-color: blue;
+  text-align: center;
+  margin: auto;
+  border-radius: 10px 10px 10px 10px;
+  background-color: rgba(255,255,255,0.8);
 }
-img{
+.image img{
   height: 350px;
-opacity: 0.6;
+  opacity: 0.6;
+  object-fit: cover;
 }
 
 .ecriture {
+  font-family: "business", Helvetica, Arial, sans-serif;
+  top: 50px;
+  /*z-index: 1;*/
+  position: absolute;
   color: rgba(255,255,255,1);
-  background-color: blue;
+  /*background-color: brown;*/
 }
 
-img span{
-color: #ffd700;
+.image .dead{
+  position: absolute;
+  background-color: transparent;
+  font-family: "business", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  color: #F1730C;
 }
 
-img h1{
-position:absolute;
+.image p span{
+color: #F1730C;
+}
+
+.image h1{
+  position:absolute;
   left: 100px;
-  top: 250px;
-  font-size: 72px;
-font-weight : lighter;
+  top: 175px;
+  font-family: "business", Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  font-weight : lighter;
   color:#FFFFFF;
 }
-
-.image:hover img{
-opacity:1;
+.image .textdead{
+  left: 150px;
+  text-decoration: line-through #F1730C;
 }
 
-.image:hover .ecriture{
-opacity:0;
+
+.image:hover img{
+  opacity:1;
+}
+
+.image:hover .ecriture,.image:hover .dead{
+  opacity:0;
 }
 
 .image:hover h1{
-position:absolute;
-  left: 150px;
-  top: 450px;
+  position:absolute;
+  left: 125px;
+  top: 275px;
   font-size: 48px;
-font-weight : lighter;
+  font-weight : lighter;
   color:#FFFFFF;
 }
