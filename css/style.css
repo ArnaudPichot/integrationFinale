@@ -86,6 +86,16 @@ section li a:hover{
   color: #F1730C;
   border-bottom: 3px solid #F1730C;
 }
+.nav .active .symbol{
+  opacity: 1;
+}
+.nav .active{
+  color: #F1730C;
+  border-bottom: 3px solid #F1730C;
+}
+.nav a .symbol{
+  opacity: 0;
+}
 
 /* css image gandalf */
 
@@ -213,60 +223,62 @@ section li a:hover{
   }
 }
 @media (min-width: 992px){
-  .image {
+  .image, .card {
     position: relative;
     text-align: center;
-    border: 3px;
-    /*width: 30vw;*/
-    height: 55vh;
+    /*border: 3px;*/
+    width: 18rem;
+    /*height: 55vh;*/
     /*border-color: #000000;*/
-    padding: 1px;
   }
-  .image img{
+  .image img, .card img{
     height: 350px;
     opacity: 0.6;
     object-fit: cover;
   }
-  .image p{
+  .image p, .card .bulle{
     position: absolute;
-    left: 90px;
-    top: 20px;
-    width: 150px;
-    height: 75px;
-    font-size: 24px;
+    /*left: 5vw;
+    top: 20px;*/
+    width: 10vw;
+    height: 10vh;
+    font-size: 1.5em;
     color:#000000;
     text-align: center;
-    margin: auto;
+    top: 5%; left: 25%;
+    /*margin-left: auto;
+    margin-right: auto;*/
     border-radius: 10px 10px 10px 10px;
     background-color: rgba(255,255,255,0.8);
   }
-  .image:hover img{
+  .image:hover img, .card:hover img{
     opacity:1;
   }
   
-  .image:hover .ecriture,.image:hover .dead{
+  .image:hover .ecriture,.image:hover .dead,
+  .card:hover .ecriture,.card:hover .dead{
     opacity:0;
   }
   
-  .image:hover h1{
+  .image:hover h1, .card:hover h1{
     position:absolute;
-    left: 125px;
+    left: 25%;
     top: 275px;
     font-size: 48px;
     font-weight : lighter;
     color:#FFFFFF;
   }
-  .image h1{
+  .image h1, .card h1{
     position:absolute;
-    left: 100px;
+    left: 25%;
     top: 175px;
     font-family: "business", Helvetica, Arial, sans-serif;
     font-size: 60px;
     font-weight : lighter;
     color:#FFFFFF;
   }
-  .image .textdead{
-    left: 150px;
+  .image .textdead, .card .textdead{
+    left: 25%;
     text-decoration: line-through #F1730C;
   }
 }
@@ -280,17 +292,18 @@ section li a:hover{
   /*background-color: brown;*/
 }
 
-.image .dead{
+.image .dead, .card .dead{
+  left: 25%;
   position: absolute;
   background-color: transparent;
   font-family: "business", Helvetica, Arial, sans-serif;
   font-size: 50px;
   color: #F1730C;
 }
-.image p span{
+.image p span, .card p span{
 color: #F1730C;
 }
 .text{
   font-family: "business", Helvetica, Arial, sans-serif;
-  font-size: 26px;
+  font-size: 24px;
 }
