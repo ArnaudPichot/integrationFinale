@@ -7,6 +7,10 @@
   font-family: "business";
   src: url('../polices/text/partybusiness.ttf') format('truetype');
   }
+  @font-face {
+    font-family: "tengwar";
+    src: url('../polices/tengwar/tngan.ttf') format('truetype');
+    }
 .logo{
   /*background-image: url("../img/logo.png");*/
   background-repeat: no-repeat;
@@ -30,7 +34,16 @@ button{
   /*text-decoration: underline;*/
   border-bottom: 3px solid #fff;
 }
-
+.titre a:hover{
+  /*text-decoration: underline;*/
+  border-bottom: 3px solid #fff;
+}
+.symbol{
+  display: inline;
+  font-family: "tengwar", Helvetica, Arial, sans-serif;
+  font-size: 5vh;
+  color: #F1730C;
+}
 .slide1{
   background-image: url("../img/slide_dark_vador.jpg");
 }
@@ -40,12 +53,23 @@ button{
 .slide3{
   background-image: url("../img/army.png");
 }
-.slide1, .slide2, .slide3{
+.carousel-inner .slide1, .carousel-inner .slide2, .carousel-inner .slide3{
   background-repeat: no-repeat;
 	background-size: cover;
-  height: 500px;
 }
-
+.carousel-inner{
+  max-height: 400px;
+}
+.carousel-caption{
+  top: 20vh;
+  font-family: "business", Helvetica, Arial, sans-serif;
+  font-size: 35px;
+}
+.carousel-caption h2{
+  top: 20vh;
+  font-family: "business", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+}
 section h4, section span, section li a{
   font-family: "aniron", Helvetica, Arial, sans-serif;
 }
@@ -54,8 +78,8 @@ section h4, section span{
 }
 section li a{
   color: #000000;
-  font-size: 10px;
-  background-color: aqua;
+  font-size: 14px;
+  /*background-color: aqua;*/
 }
 section li a:hover{
   text-decoration: none;
@@ -76,30 +100,175 @@ section li a:hover{
 *
 *
 **********************/
-.image {
-  position: relative;
-  /*z-index: 0;*/
-  text-align: center;
-  border: 5px;
-  height: 200px;
+.gandalf{
+  margin-top: 15px;
 }
-.image p{
-  position: absolute;
-  left: 90px;
-  top: 20px;
-  width: 200px;
-  height: 75px;
-  font-size: 24px;
-  color:#000000;
-  text-align: center;
-  margin: auto;
-  border-radius: 10px 10px 10px 10px;
-  background-color: rgba(255,255,255,0.8);
+@media (max-width: 767px) {
+  .titre span{
+    display: none;
+  }
+  section h4, section span, section li a, section .symbol{
+    font-family: "aniron", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+  }
+  section h4, section span{
+    display: inline;
+  }
+  .image {
+    height: 10vh;
+    position: relative;
+    text-align: center;
+    border: 5px;
+    background-color: #000000;
+  }
+  .image img{
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+  }
+  .image p{
+    position: absolute;
+    left: 90px;
+    top: 20px;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    color:#000000;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(255,255,255,0.8);
+  }
+  .image h1{
+    position:absolute;
+    left: 100px;
+    top: 175px;
+    font-family: "business", Helvetica, Arial, sans-serif;
+    font-size: 60px;
+    font-weight : lighter;
+    color:#FFFFFF;
+  }
+  .image .textdead{
+    left: 150px;
+    text-decoration: line-through #F1730C;
+  }
 }
-.image img{
-  height: 350px;
-  opacity: 0.6;
-  object-fit: cover;
+@media (min-width: 768px){
+  .image {
+    position: relative;
+    text-align: center;
+    border: 30px;
+    border-color: #FFFFFF;
+    height: 60vh;
+    background-color: #000000;
+  }
+  .image img{
+    width: 15em;
+    height: 15em;
+    opacity: 0.6;
+    object-fit: cover;
+  }
+  .image p{
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    color:#000000;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(255,255,255,0.8);
+  }
+  .image:hover img{
+    opacity:1;
+  }
+  
+  .image:hover .ecriture,.image:hover .dead{
+    opacity:0;
+  }
+  
+  .image:hover h1{
+    position:absolute;
+    left: 125px;
+    top: 275px;
+    font-size: 48px;
+    font-weight : lighter;
+    color:#FFFFFF;
+  }
+  .image h1{
+    position:absolute;
+    left: 50px;
+    top: 175px;
+    font-family: "business", Helvetica, Arial, sans-serif;
+    font-size: 60px;
+    font-weight : lighter;
+    color:#FFFFFF;
+  }
+  .image .textdead{
+    left: 10vw;
+    padding: auto auto;
+    text-decoration: line-through #F1730C;
+  }
+}
+@media (min-width: 992px){
+  .image {
+    position: relative;
+    text-align: center;
+    border: 3px;
+    /*width: 30vw;*/
+    height: 55vh;
+    /*border-color: #000000;*/
+    padding: 1px;
+  }
+  .image img{
+    height: 350px;
+    opacity: 0.6;
+    object-fit: cover;
+  }
+  .image p{
+    position: absolute;
+    left: 90px;
+    top: 20px;
+    width: 150px;
+    height: 75px;
+    font-size: 24px;
+    color:#000000;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(255,255,255,0.8);
+  }
+  .image:hover img{
+    opacity:1;
+  }
+  
+  .image:hover .ecriture,.image:hover .dead{
+    opacity:0;
+  }
+  
+  .image:hover h1{
+    position:absolute;
+    left: 125px;
+    top: 275px;
+    font-size: 48px;
+    font-weight : lighter;
+    color:#FFFFFF;
+  }
+  .image h1{
+    position:absolute;
+    left: 100px;
+    top: 175px;
+    font-family: "business", Helvetica, Arial, sans-serif;
+    font-size: 60px;
+    font-weight : lighter;
+    color:#FFFFFF;
+  }
+  .image .textdead{
+    left: 150px;
+    text-decoration: line-through #F1730C;
+  }
 }
 
 .ecriture {
@@ -118,39 +287,10 @@ section li a:hover{
   font-size: 50px;
   color: #F1730C;
 }
-
 .image p span{
 color: #F1730C;
 }
-
-.image h1{
-  position:absolute;
-  left: 100px;
-  top: 175px;
+.text{
   font-family: "business", Helvetica, Arial, sans-serif;
-  font-size: 60px;
-  font-weight : lighter;
-  color:#FFFFFF;
-}
-.image .textdead{
-  left: 150px;
-  text-decoration: line-through #F1730C;
-}
-
-
-.image:hover img{
-  opacity:1;
-}
-
-.image:hover .ecriture,.image:hover .dead{
-  opacity:0;
-}
-
-.image:hover h1{
-  position:absolute;
-  left: 125px;
-  top: 275px;
-  font-size: 48px;
-  font-weight : lighter;
-  color:#FFFFFF;
+  font-size: 26px;
 }
